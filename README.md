@@ -11,9 +11,16 @@ Project 6 as part of Sprint3-4-5-6-7-8-9 sequence
 - CSS animation and transform (i.e. Hovering)
 - Media query and responsive layout
 
-## Plan on improving the project
+This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
 
-Can add functinality to the page and additional features using JavaScript with relation with HTML and CSS.
+Responsive vs Adaptive Web Design
 
-Link to GitHub:
-Link:
+Responsive layouts.
+
+Responsive blocks and change CSS styles at breakpoints.
+
+Grid Layout and CSS Grid Layout Terminology
+
+Media Queries
+
+Interface for Different Devices
