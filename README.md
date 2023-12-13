@@ -13,8 +13,7 @@ Project 6 as part of Sprint3-4-5-6-7-8-9 sequence
 
 ## Plan on improving the project
 
-Can add functinality to the page and additional features using JavaScript.
-Can make it more interactive and have a more analytical target audience using more analytical features that shows graphs that display input history.
+Can add functinality to the page and additional features using JavaScript with relation with HTML and CSS.
 
 Link to GitHub:
 Link:
