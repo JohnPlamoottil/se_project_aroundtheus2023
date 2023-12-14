@@ -1,79 +1,71 @@
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
   list-style-type: none;
-  overflow: hidden;
-  max-width: 282px;
-}
-
-.card__title {
-  max-width: 220px;
-  font-family: Inter, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 29px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
+  position: relative;
 }
 
 .card__image {
   width: 282px;
   height: 282px;
-  cursor: pointer;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .card__description {
   display: flex;
   background-color: white;
-  color: black;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  border-radius: 0px 0px 10px 10px;
   align-items: center;
-  justify-content: space-between;
+  padding: 25px 20px;
 }
 
 .card__like-button {
-  background: transparent url(../images/like-inactive.svg) center no-repeat;
+  background: transparent url(../images/heart-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0px;
   width: 21px;
   height: 18px;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.card__like-button_active {
-  background-image: url(../images/like-active.svg);
+  margin-left: auto;
 }
 
 .card__like-button:hover {
-  opacity: 0.5;
-}
-
-.card__trash-button {
-  background: transparent url(../images/Trash.svg) center no-repeat;
-  width: 18px;
-  height: 19.3px;
-  align-self: flex-end;
+  opacity: 50%;
   cursor: pointer;
-  transition: 0.4s;
-  border: none;
-  margin-right: 15px;
-  margin-top: 18px;
+}
+
+.card__like-button_black {
+  background: transparent url(../images/heart-icon-black.svg);
+}
+
+.card__delete-button {
+  background: transparent url(../images/trash-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0px;
+  width: 18px;
+  height: 20px;
   position: absolute;
+  top: 18px;
+  right: 15px;
 }
 
-.card__trash-button:hover {
-  opacity: 0.6;
+.card__delete-button:hover {
+  background: transparent url(../images/trash-icon-hover.svg);
+  cursor: pointer;
 }
 
-@media screen and (max-width: 568px) {
-  .card__list {
-    padding: 15px 0 18px;
-  }
+.card__title {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
 }

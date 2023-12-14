@@ -1,26 +1,25 @@
-# Triple Peaks Around the U.S.
+# Project: Around The U.S.
 
-Project 6 as part of Sprint3-4-5-6-7-8-9 sequence
+**Project Description**
 
-## Project features
+Current project is "user profile with gallery". You can see in it "profile image", "profile name", "edit button", "add button" "profile description" and "card gallery".
 
-- Semantic HTML5
-- Flexbox
-- Positioning
-- Flat BEM file structure
-- CSS animation and transform (i.e. Hovering)
-- Media query and responsive layout
+**Functionality and Technologies**
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+For this project we used HTMl, BEM and CSS, and JavaScript as well.
+Also we used Media Queries to make our project responsive.
+CSS grid was very helpful to build up gallery in project.
+Use of JavaScript event listeners made our page intercative.
+Our gallery also builded from JavaScript code and functions.
+There is feature of adding/removing/liking our cards.
+We can look on image and it's caption by clicking on it.
 
-Responsive vs Adaptive Web Design
+**Future Updates**
 
-Responsive layouts.
+Changes that we made will stay as is after being reloaded.
 
-Responsive blocks and change CSS styles at breakpoints.
+**GitHub Pages Link**
 
-Grid Layout and CSS Grid Layout Terminology
+https://dmndesign.github.io/se_project_aroundtheus/
 
-Media Queries
-
-Interface for Different Devices
+hello
