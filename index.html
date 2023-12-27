@@ -1,162 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <title>Around The US</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Around the U.S</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Travel locations in the US" />
+    <meta name="keywords" content="Travel, US, Beauty" />
+    <meta name="author" content="John Plamoottil" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
     <link href="./pages/index.css" rel="stylesheet" />
   </head>
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
-        <img class="header__logo" src="./images/logo.svg" alt="logo" />
+        <img
+          class="header__logo"
+          src="./images/Logo.svg"
+          alt="Around the U.S logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
             class="profile__image"
             src="./images/jacques-cousteau.png"
-            alt="Profile Avatar"
+            alt="Avatar"
           />
-          <div class="profile__content">
-            <h1 class="profile__title">Jacques Cousteau</h1>
+          <div class="profile__info">
+            <h1 class="profile__name">Jacques Cousteau</h1>
             <button
               class="profile__edit-button"
               type="button"
-              aria-label="edit-button"
+              aria-label="edit profile"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
           <button
             class="profile__add-button"
             type="button"
-            aria-label="add-button"
+            aria-label="add card"
           ></button>
         </section>
         <section class="cards page__section">
-          <ul class="cards__list"></ul>
+          <ul class="cards__list">
+            <template id="card">
+              <li class="card">
+                <button
+                  class="card__trash-button"
+                  type="button"
+                  aria-label="remove card"
+                ></button>
+                <img src="" alt="" class="card__image" />
+                <div class="card__description">
+                  <h2 class="card__title"></h2>
+                  <button
+                    class="card__like-button"
+                    type="button"
+                    aria-label="like card"
+                  ></button>
+                </div>
+              </li>
+            </template>
+          </ul>
         </section>
       </main>
       <footer class="footer page__section">
-        <p class="footer__copyright">© 2023 Around The U.S.</p>
+        <p class="footer__copyright">© 2023 John Plamoottil</p>
       </footer>
-    </div>
-    <!--Profile Edit Popup-->
-    <div class="modal" id="modal-profile">
-      <div class="modal__container modal__container_profile">
-        <button
-          class="modal__close-button modal__close-button_profile"
-          type="button"
-          aria-label="close-button"
-        ></button>
-        <h3 class="modal__title modal__title_profile">Edit Profile</h3>
-        <form class="modal__form modal__form_profile">
-          <input
-            class="modal__form-name modal__form-name_profile"
-            type="text"
-            name="Name"
-            placeholder="Name"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <span class="modal__error" id="profile-title-input-error"></span>
-          <input
-            class="modal__form-description modal__form-description_profile"
-            type="text"
-            name="About me"
-            placeholder="Description"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span
-            class="modal__error"
-            id="profile-description-input-error"
-          ></span>
-          <button
-            class="modal__submit-button modal__submit-button_profile"
-            type="submit"
-            aria-label="save-button"
-          >
-            Save
-          </button>
-        </form>
-      </div>
-    </div>
-    <!--End of profile edit pop up-->
-    <!--Add new place pop up-->
-    <div class="modal" id="modal-newplace">
-      <div class="modal__container modal__container_newplace">
-        <button
-          class="modal__close-button modal__close-button_newplace"
-          type="button"
-          aria-label="close-button"
-        ></button>
-        <h3 class="modal__title modal__title_newplace">New Place</h3>
-        <form class="modal__form modal__form_newplace">
-          <input
-            class="modal__form-title modal__form-title_newplace"
-            type="text"
-            name="Title"
-            placeholder="Title"
-            minlength="1"
-            maxlength="30"
-            required
-          />
-          <span class="modal__error"></span>
-          <input
-            class="modal__form-url modal__form-url_newplace"
-            type="url"
-            name="link"
-            placeholder="Image link"
-            required
-          />
-          <span class="modal__error"></span>
-          <button
-            class="modal__submit-button modal__submit-button_newplace"
-            type="submit"
-            aria-label="submit-button"
-          >
-            Save
-          </button>
-        </form>
-      </div>
-    </div>
-    <!--End of new place pop up-->
-    <!--Card Preview-->
-    <div class="modal" id="modal-preview">
-      <div class="modal__container modal__container_preview">
-        <button
-          class="modal__close-button modal__close-button_preview"
-          type="button"
-          aria-label="close-button"
-        ></button>
-        <img src="#" alt="" class="modal__image modal__image_preview" />
-        <h3 class="modal__caption modal__caption_preview"></h3>
-      </div>
-    </div>
-    <!--End of card preview-->
-    <!--Card render template-->
-    <template id="card-template">
-      <li class="card">
-        <img src="#" class="card__image" alt="" />
-        <button
-          class="card__delete-button"
-          type="button"
-          aria-label="delete-button"
-        ></button>
-        <div class="card__description">
-          <h2 class="card__title"></h2>
-          <button
-            class="card__like-button"
-            type="button"
-            aria-label="like-button"
-          ></button>
+      <div class="modal" id="modal-profile-edit">
+        <div class="modal__container">
+          <button class="modal__close modal__close_type_form"></button>
+          <p class="modal__title">Edit Profile</p>
+          <form class="modal__form" name="profileForm" novalidate>
+            <label class="modal__label">
+              <input
+                type="text"
+                class="modal__input modal__input_type_name"
+                placeholder="Name"
+                id="person-name"
+                name="name"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span class="modal__error" id="person-name-error"></span>
+            </label>
+            <label class="modal__label">
+              <input
+                type="text"
+                class="modal__input modal__input_type_description"
+                placeholder="Description"
+                name="description"
+                id="person-description"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <span class="modal__error" id="person-description-error"></span>
+            </label>
+            <button class="modal__button" type="submit">Save</button>
+          </form>
         </div>
-      </li>
-    </template>
-    <!--End of card render template-->
+      </div>
+      <div class="modal" id="modal-add-card">
+        <div class="modal__container">
+          <button class="modal__close modal__close_type_form"></button>
+          <p class="modal__title">New Place</p>
+          <form class="modal__form" name="addCardForm" novalidate>
+            <label class="modal__label">
+              <input
+                type="text"
+                class="modal__input modal__input_type_title"
+                placeholder="Title"
+                name="title"
+                id="card-title"
+                minlength="1"
+                maxlength="30"
+                required
+              />
+              <span class="modal__error" id="card-title-error"></span>
+            </label>
+            <label class="modal__label">
+              <input
+                type="url"
+                class="modal__input modal__input_type_image-link"
+                placeholder="Image link"
+                name="image link"
+                id="card-url"
+                required
+              />
+              <span class="modal__error" id="card-url-error">Error</span>
+            </label>
+            <button class="modal__button" type="submit">Create</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="image-preview-modal">
+        <div class="modal__container modal__container_type_image">
+          <button class="modal__close modal__close_type_image"></button>
+          <img class="modal__image" src="#" alt="" />
+          <p class="modal__image-title"></p>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>

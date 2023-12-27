@@ -1,71 +1,73 @@
 .card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
   position: relative;
 }
 
 .card__image {
   width: 282px;
   height: 282px;
-  object-fit: cover;
-  border-radius: 10px 10px 0px 0px;
+}
+
+.card__image:hover {
+  cursor: pointer;
 }
 
 .card__description {
   display: flex;
-  background-color: white;
-  border-radius: 0px 0px 10px 10px;
-  align-items: center;
+  justify-content: space-between;
   padding: 25px 20px;
 }
 
+.card__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  margin: 0;
+  max-width: 219px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .card__like-button {
-  background: transparent url(../images/heart-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 0px;
+  background: transparent url(../images/heart.svg) center no-repeat;
+  transition: opacity 0.3s linear;
+  border: 0;
+  margin: 0;
+  padding: 0;
   width: 21px;
   height: 18px;
-  margin-left: auto;
+  align-self: center;
+}
+
+.card__like-button_active {
+  background: transparent url(../images/liked.svg) center no-repeat;
 }
 
 .card__like-button:hover {
-  opacity: 50%;
+  opacity: 0.5;
   cursor: pointer;
 }
 
-.card__like-button_black {
-  background: transparent url(../images/heart-icon-black.svg);
-}
-
-.card__delete-button {
-  background: transparent url(../images/trash-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 0px;
+.card__trash-button {
+  background: transparent url(../images/trash.svg) center no-repeat;
+  transition: opacity 0.3s linear;
+  border: 0;
+  margin: 0;
+  padding: 0;
   width: 18px;
-  height: 20px;
+  height: 19.3px;
   position: absolute;
   top: 18px;
   right: 15px;
 }
 
-.card__delete-button:hover {
-  background: transparent url(../images/trash-icon-hover.svg);
+.card__trash-button:hover {
+  opacity: 0.5;
   cursor: pointer;
-}
-
-.card__title {
-  font-family: Inter, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: 0em;
-  text-align: left;
-  color: black;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
 }

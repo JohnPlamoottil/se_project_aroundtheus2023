@@ -1,25 +1,23 @@
-# Project: Around The U.S.
+# Project 6: Around The U.S.
 
-**Project Description**
+### Overview
 
-Current project is "user profile with gallery". You can see in it "profile image", "profile name", "edit button", "add button" "profile description" and "card gallery".
+- Project Name
+- Project Description
+- Technologies Used
+- Link to Github-Pages
 
-**Functionality and Technologies**
+**Project Name:**
 
-For this project we used HTMl, BEM and CSS, and JavaScript as well.
-Also we used Media Queries to make our project responsive.
-CSS grid was very helpful to build up gallery in project.
-Use of JavaScript event listeners made our page intercative.
-Our gallery also builded from JavaScript code and functions.
-There is feature of adding/removing/liking our cards.
-We can look on image and it's caption by clicking on it.
+TripleTen Around the US - Project 6
 
-**Future Updates**
+**Project Description:**
 
-Changes that we made will stay as is after being reloaded.
+This is project 6 of the TripleTen. It shows the places visited in the US.
 
-**GitHub Pages Link**
+**Technologies Used:**
 
-https://dmndesign.github.io/se_project_aroundtheus/
+I used HTML and CSS.
+This project utilizes a responsive design, where any screen-size can load the page without issues.
 
-hello
+**Link to Github-Pages:**
