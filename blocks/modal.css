@@ -15,6 +15,7 @@
 .modal_opened {
   visibility: visible;
   opacity: 1;
+  transition: visibility 0s;
 }
 
 .modal__container {
