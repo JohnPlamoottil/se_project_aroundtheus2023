@@ -65,7 +65,7 @@ const previewImageTitle = modalImagePreview.querySelector(
   ".modal__image-title"
 );
 
-//------------------FUNCTION THAT CREATS CARDS------------------>>
+//------------------FUNCTION THAT CREATES CARDS------------------>>
 function createCard(data) {
   const cardTemplate = document.querySelector("#card").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
