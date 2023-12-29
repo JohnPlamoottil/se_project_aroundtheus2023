@@ -4,7 +4,7 @@
 
 - Project Name
 - Project Description
-- Technologies Used
+- Technologies Used - javascript. index.js and validation.js
 - Link to Github-Pages
 
 **Project Name:**
@@ -18,7 +18,6 @@ This is project 6 of the TripleTen. It shows the places visited in the US.
 **Technologies Used:**
 
 I used HTML and CSS.
-This project utilizes a responsive design, where any screen-size can load the page without issues.
 
 **Link to Github-Pages:**
 

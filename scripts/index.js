@@ -52,6 +52,7 @@ const profileDescriptionInput = modalProfileEdit.querySelector(
 
 //--------------------ADD IMAGE MODAL ELEMENTS-------------------->>
 const modalAddImage = document.querySelector("#modal-add-card");
+const modalAddSubmitBtn = modalAddImage.querySelector(".modal__button");
 const imageAddForm = document.forms["addCardForm"];
 const modalImageTitle = modalAddImage.querySelector(".modal__input_type_title");
 const modalImageLink = modalAddImage.querySelector(
@@ -156,7 +157,13 @@ editButton.addEventListener("click", () => {
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 //--------------------ADD IMAGE MODAL EVENTS-------------------->>
-addButton.addEventListener("click", () => openModal(modalAddImage));
+addButton.addEventListener("click", () => {
+  // disable form button
+  modalAddSubmitBtn.classList.add("modal__button_disabled");
+  modalAddSubmitBtn.disabled = true;
+  openModal(modalAddImage);
+});
+
 imageAddForm.addEventListener("submit", handleAddImageFormSubmit);
 
 //--------------------MODAL CLOSE EVENT LOOP-------------------->>
